@@ -1,0 +1,120 @@
+.header {
+    width: 100%;
+    background-color: #fff;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-family: 'Galano Grotesque', sans-serif;
+    font-size: 18px;
+    background-color: #F4F4F4;
+}
+
+.blue {
+    color: #1890FF;
+}
+
+.logo-image-header {
+    width: 100px;
+    height: auto;
+}
+
+
+.nav-item a {
+    position: relative;
+    color: #1890FF;
+    text-decoration: none;
+}
+
+.nav-item a.focused::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -2px;
+    background-color: #1890FF;
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+
+
+.nav-item a:hover {
+    text-decoration: none;
+}
+
+.nav-item a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.button-col {
+    display: block;
+    font-size: 0.9em;
+    width: 50%;
+
+}
+
+.header::after,
+.header::before,
+.blue::after,
+.blue::before,
+.header-content::after,
+.header-content::before,
+.nav::after,
+.nav::before,
+.nav-list::after,
+.nav-list::before,
+.nav-item::after,
+.nav-item::before,
+.button-col::after,
+.button-col::before,
+.button::after,
+.button::before {
+    box-sizing: border-box;
+}
+
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 0.9em;
+
+    }
+
+
+
+    .button-col {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+
+}

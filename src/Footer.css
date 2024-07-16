@@ -1,0 +1,57 @@
+.footer {
+  width: 100%;
+  background-color: #1890FF;
+  color: #fff;
+  padding: 40px;
+  box-shadow: 4px 4px 4px 4px #00294f23;
+  border: none;
+  margin: 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap; /* Permite que as colunas sejam empilhadas em telas menores */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-col-f {
+  flex-basis: 100%; /* Garante que a imagem do logo ocupe toda a largura */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+
+}
+
+.footer-column {
+  flex: 1;
+  text-align: center; /* Centraliza o texto */
+}
+
+.logo-image {
+  width: 150px;
+  height: auto;
+}
+
+/* Estilo global para garantir que nenhum elemento tenha borda por padrão */
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Empilha as colunas verticalmente */
+    align-items: center; /* Centraliza todo o conteúdo verticalmente */
+  }
+
+  .footer-column {
+    flex-basis: auto; /* Garante que as colunas ocupem toda a largura */
+    margin: 10px 0; /* Espaçamento entre as colunas */
+  }
+
+  .logo-col-f {
+    margin-bottom: 0; /* Remove o espaçamento abaixo do logo */
+  }
+}
